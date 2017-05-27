@@ -18,6 +18,10 @@ shinyUI(fluidPage(
       actionButton(inputId = "corn", label = "Corn", width = 160),
       #br(),
       actionButton(inputId = "variety", label = "Soybeans", width = 160),
+      br(),
+      br(),
+      fileInput("in_file", "Input file:",
+                accept=c("txt/csv", "text/comma-separated-values,text/plain", ".csv")),
     #  p("Shiny is available on CRAN, so you can install it in the usual way from your R console:"),
     #  code('install.packages("shiny")'),
     #  br(),
@@ -32,11 +36,17 @@ shinyUI(fluidPage(
     br(),
     br(),
     h5("Why epidemiological models are important?"),
-    p("fluid text"),
-    br()
+    p("I think that it is nice to have some details on what this topic should
+      be highlighted"),
+    br(),
+    br(),
+    br(),
+    h6("Powered by:"),
+    tags$img(src = "RStudio-Ball.png", height = 50, width = 50),
+    tags$img(src = "isee-systems.png", height = 50, width = 75)
     ),
     mainPanel(
-      img(src = "bigorb.png", height = 72, width = 72)
+      
       #h2("Why epidemiological models are important?"),
       #p("Shiny is a new package from RStudio that makes it ", 
       #  em("incredibly easy"), 
